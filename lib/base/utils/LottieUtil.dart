@@ -11,9 +11,7 @@ class LottieUtils {
   LottieUtils._internal();
 
   static LottieUtils? _getInstance() {
-    if (_instance == null) {
-      _instance = new LottieUtils._internal();
-    }
+    _instance ??= LottieUtils._internal();
     return _instance;
   }
 

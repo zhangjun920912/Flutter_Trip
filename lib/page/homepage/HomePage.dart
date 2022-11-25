@@ -13,9 +13,9 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-        home: new HomePageDisplayPage(),
-        theme: new ThemeData(
+    return  MaterialApp(
+        home:  HomePageDisplayPage(),
+        theme:  ThemeData(
           primaryColor: Color(0xFF198CFF),
         ));
   }
@@ -52,12 +52,12 @@ class HomePageDisplayPageState extends State<HomePageDisplayPage> {
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-        appBar: new AppBar(
-          title: new Text('首页'),
+    return  Scaffold(
+        appBar:  AppBar(
+          title:  Text('首页'),
           actions: <Widget>[
-            new IconButton(
-                icon: new Icon(
+             IconButton(
+                icon:  Icon(
                   Icons.center_focus_weak,
                   color: Colors.white,
                 ),
@@ -123,19 +123,19 @@ class HomePageDisplayPageState extends State<HomePageDisplayPage> {
   ///打开使用provider的界面
   void openCartAnimationPage() {
     Navigator.push(context,
-        new MaterialPageRoute(builder: (context) => new CartAnimationPage()));
+         MaterialPageRoute(builder: (context) =>  CartAnimationPage()));
   }
 
   ///打开使用provider的界面
   void openProviderPage() {
     Navigator.push(context,
-        new MaterialPageRoute(builder: (context) => new ProviderUsePage()));
+         MaterialPageRoute(builder: (context) =>  ProviderUsePage()));
   }
 
   ///使用InheritedWidget实现数据共享
   void shareDateWithInheritedWidget() {
     Navigator.push(context,
-        new MaterialPageRoute(builder: (context) => new ShareDataWidgetPage()));
+         MaterialPageRoute(builder: (context) =>  ShareDataWidgetPage()));
   }
 
   ///调用Native的方式弹出Toast
@@ -153,7 +153,7 @@ class HomePageDisplayPageState extends State<HomePageDisplayPage> {
   void _loadWebView() {
     Navigator.push(
       context,
-      new MaterialPageRoute(builder: (context) => new ProductDetailPage()),
+       MaterialPageRoute(builder: (context) =>  ProductDetailPage()),
     );
   }
 }

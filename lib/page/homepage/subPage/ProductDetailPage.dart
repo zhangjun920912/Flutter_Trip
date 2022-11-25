@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:webviewx/webviewx.dart';
+import 'package:zjflutter_practise/base/utils/ScreenUtil.dart';
 
 class ProductDetailPage extends StatelessWidget {
 
@@ -14,19 +16,10 @@ class ProductDetailPage extends StatelessWidget {
     titleContent.add(Container(
       width: 50.0,
     ));
-    return Container();
-    // return WebviewScaffold(
-    //   url: "https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index",
-    //   appBar: AppBar(
-    //     title: Row(
-    //       mainAxisAlignment: MainAxisAlignment.center,
-    //       children: titleContent,
-    //     ),
-    //     iconTheme: const IconThemeData(color: Colors.white),
-    //   ),
-    //   withZoom: true,
-    //   withLocalStorage: true,
-    //   withJavascript: true,
-    // );
+    return WebViewX(
+      height: ScreenUtil.getScreenHeight(),
+      width: ScreenUtil.getScreenWidth(),
+      initialContent: "https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index",
+    );
   }
 }

@@ -6,9 +6,9 @@ class CartPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-        home: new CheckoutPage(),
-        theme: new ThemeData(
+    return  MaterialApp(
+        home:  CheckoutPage(),
+        theme:  ThemeData(
           primaryColor: Color(0xFF198CFF),
         ));
   }
@@ -26,28 +26,28 @@ class CheckoutPageState extends State<CheckoutPage> {
   Widget build(BuildContext context) {
     var images = [
       'http://n.sinaimg.cn/front/351/w640h511/20181028/IMAa-hnaivxp6318749.jpg',
-      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=203592236,407361841&fm=26&gp=0.jpg',
+      'https://img0.baidu.com/it/u=372789594,2344633202&fm=253&fmt=auto&app=120&f=JPEG?w=589&h=500',
       'http://n.sinaimg.cn/sinacn21/328/w687h441/20180801/d853-hhehtqf0969489.png',
-      'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=463298063,3917828360&fm=26&gp=0.jpg',
-      'https://b-ssl.duitang.com/uploads/item/201808/09/20180809210617_kkjgc.thumb.700_0.jpg',
+      'https://img0.baidu.com/it/u=1498937664,493969290&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
+      'https://img0.baidu.com/it/u=2409084625,2891916544&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=889',
     ];
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('Checkout Follow'),
+    return  Scaffold(
+      appBar:  AppBar(
+        title:  const Text('资源展示'),
         actions: <Widget>[
-          new IconButton(
-              icon: new Icon(Icons.add_shopping_cart), onPressed: _pushSaved),
+           IconButton(
+              icon:  const Icon(Icons.add_shopping_cart), onPressed: _pushSaved),
         ],
       ),
       body: Swiper(
         itemCount: images.length,
         itemBuilder: (BuildContext context, int index) {
-          return new Image.network(
+          return  Image.network(
             images[index],
             fit: BoxFit.fill,
           );
         },
-        pagination: new SwiperPagination(),
+        pagination:  const SwiperPagination(),
         control: null,
         loop: true,
         autoplay: true,

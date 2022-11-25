@@ -13,11 +13,9 @@ class ProviderUsePageState extends State<ProviderUsePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Provider的使用"),
+        title: const Text("Provider的使用"),
       ),
-      body: Container(
-        child: Text("sky122"),
-      ),
+      body:const Text("sky122"),
     );
   }
 }

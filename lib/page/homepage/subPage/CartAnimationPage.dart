@@ -21,7 +21,7 @@ class _CartAnimationPageState extends State<CartAnimationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("动画的使用"),
+        title: const Text("动画的使用"),
       ),
       body: Container(
         decoration: BoxDecoration(border: Border.all(color: Colors.red, width: 0.5)),

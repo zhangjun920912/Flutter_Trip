@@ -4,24 +4,21 @@ import 'package:flutter/material.dart';
 class ProfilePage extends StatelessWidget {
   String name = '';
 
-  ProfilePage(String name) {
-    this.name = name;
-  }
-
+  ProfilePage(this.name, {super.key}) ;
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      appBar: new AppBar(
-        title: new Text('个人信息'),
+    return  Scaffold(
+      appBar:  AppBar(
+        title:  const Text('个人信息'),
         actions: <Widget>[
-          new IconButton(icon: new Icon(Icons.share), onPressed: sharePlatform)
+           IconButton(icon:const Icon(Icons.share), onPressed: sharePlatform)
         ],
       ),
-      body: new ListView(
+      body:  ListView(
         children: <Widget>[
-          new Image.network('https://www.suanya.cn/dist/img/home-banner.a85336b.png', fit: BoxFit.fill),
-          new TextButton(
-              child: new Text(this.name),
+           Image.network('https://www.suanya.cn/dist/img/home-banner.a85336b.png', fit: BoxFit.fill),
+           TextButton(
+              child: Text(name),
               onPressed: () {
                 Navigator.pop(context);
               })
