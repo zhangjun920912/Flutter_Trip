@@ -1,9 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProviderUsePage extends StatefulWidget {
+  const ProviderUsePage({super.key});
+
   @override
-  ProviderUsePageState createState() => new ProviderUsePageState();
+  ProviderUsePageState createState() => ProviderUsePageState();
 }
 
 class ProviderUsePageState extends State<ProviderUsePage> {

@@ -1,5 +1,5 @@
 ///
-///@desc:
+///@desc:流布局组件
 ///@author: jzhang28
 ///@date: 2022年06月22 11点31分，Wednesday
 ///
@@ -68,7 +68,7 @@ class LinesWrapLayoutBox extends RenderCustomMultiChildLayoutBox
       size = constraints.smallest;
       return;
     }
-    var maxSize = Size(0, 0);
+    var maxSize = const Size(0, 0);
     double x = 0.0, y = 0.0;
     int line = 0;
     List<RenderBox> lineOfData = [];
@@ -83,7 +83,7 @@ class LinesWrapLayoutBox extends RenderCustomMultiChildLayoutBox
       value.parentData as LinesWrapLayoutBoxParentData;
 
       Constraints childConstraints =
-      BoxConstraints(maxWidth: double.infinity, maxHeight: double.infinity);
+      const BoxConstraints(maxWidth: double.infinity, maxHeight: double.infinity);
       if (childParentData.isLine) {
         childConstraints = BoxConstraints(
             maxWidth: double.infinity, maxHeight: maxSize.height);
@@ -101,18 +101,18 @@ class LinesWrapLayoutBox extends RenderCustomMultiChildLayoutBox
       Size childSize = value.size;
 
       if (lines > 0 && line >= lines) {
-        _positionChild(childParentData, Offset(0, 0), false);
+        _positionChild(childParentData,const Offset(0, 0), false);
         continue;
       }
 
       if (childSize.isEmpty) {
-        _positionChild(childParentData, Offset(0, 0), false);
+        _positionChild(childParentData, const Offset(0, 0), false);
         continue;
       }
       if (x + childSize.width <= constraints.maxWidth) {
         if (lines > 0 && line >= lines) {
           //放不下了
-          _positionChild(childParentData, Offset(0, 0), false);
+          _positionChild(childParentData,const Offset(0, 0), false);
         } else {
           lineOfData.add(value);
           _positionChild(childParentData, Offset(x, y), true);
@@ -140,9 +140,9 @@ class LinesWrapLayoutBox extends RenderCustomMultiChildLayoutBox
         lineOfData = [];
 
         if (lines > 0 && line >= lines) {
-          _positionChild(childParentData, Offset(0, 0), false);
+          _positionChild(childParentData, const Offset(0, 0), false);
         } else {
-          Constraints childConstraints = BoxConstraints(
+          Constraints childConstraints = const BoxConstraints(
               maxWidth: double.infinity, maxHeight: double.infinity);
           value.layout(childConstraints, parentUsesSize: true);
           childSize = value.size;
