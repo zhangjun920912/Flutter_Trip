@@ -8,18 +8,14 @@ class ProductDetailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<Widget> titleContent = [];
-    titleContent.add(const Text(
-      '携程旅行网',
-      style: TextStyle(color: Colors.white),
-    ));
-    titleContent.add(Container(
-      width: 50.0,
-    ));
-    return WebViewX(
-      height: ScreenUtil.getScreenHeight(),
-      width: ScreenUtil.getScreenWidth(),
-      initialContent: "https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index",
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text('携程在手 所走就走')
+        ),
+        body: WebViewX(
+          height: ScreenUtil.getScreenHeight(),
+          width: ScreenUtil.getScreenWidth(),
+          initialContent: "https://www.ctrip.com/?sid=155952&allianceid=4897&ouid=index",
+        ));
   }
 }
