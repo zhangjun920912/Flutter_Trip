@@ -10,10 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
+    return  MaterialApp(
       title: _title,
-      home: new MyStatefulWidget(),
-      theme: new ThemeData(primaryColor: Color(0xFF198CFF)),
+      home:  MyStatefulWidget(),
+      theme:  ThemeData(primaryColor: Color(0xFF198CFF)),
     );
   }
 }
@@ -54,7 +54,7 @@ class MyStatefulWidgetState extends State<MyStatefulWidget> {
               icon: Icon(Icons.person_outline), label:'我的'),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Color(0xFF198CFF),
+        selectedItemColor: const Color(0xFF198CFF),
         unselectedItemColor: Colors.grey[400],
         onTap: _onItemTapped,
         showUnselectedLabels: true,
